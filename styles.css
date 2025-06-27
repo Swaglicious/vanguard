@@ -1,7 +1,8 @@
-/* CSS BY YOUR NAME */
+/* styles.css by Alex Rodriguez*/
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS"
+/* IMPORT "INTER" FROM GOOGLE FONTS" */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -63,18 +64,237 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
+h1, h2, h3,p, li,table, form, footer{
+    font-family: inter;
+}
 
-/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+body{
+    min-width: 400px;
+    line-height: 1.5;
+    margin:0 auto;
+    max-width:100%;
+}
 
-/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
+header{
+    background-color: var(--black);
+    color:var(--blue);
+    display:flex;
+    flex-direction: row;
+    font-size: larger;
+    font-weight: bold;
+    border-bottom: 1px solid var(--blue);
+    box-shadow: 0 4.5px 8px var(--blue);
+    padding:1em;
+    position: relative;
+}
+h1{
+    font-size: larger;
+    font-weight: bold;
+}
+header h2{
+    visibility: hidden;
+}
+
+#innovation{
+    color:var(--white);
+    grid-template-rows: 0.01fr 0.01fr 0.01fr;
+    align-content: center;
+    
+}
+
+.blursec{
+    backdrop-filter: blur(5px); 
+  -webkit-backdrop-filter: blur(5px);
+  padding:10px;
+}
+
+#innovation h2{
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom:0.6em;
+}
+
+#innovation p:nth-last-of-type(1){
+    background-color: var(--blue);
+    border-radius: 5px;
+    padding: 0.6em;
+    font-weight: bold;
+    width:45%;
+    padding:.8em;
+    margin:1rem auto;
+}
+
+#exp h2:nth-last-of-type(1){
+    padding-top: 1em;
+}
+
+#exp h2{
+    font-size:25px;
+    font-weight: bold;
+    padding-left: 1em;
+    padding-top:2em;
+    padding-bottom: 0.5em;
+}
+
+#exp div{
+    background-color: var(--blue);
+    margin-bottom:1em;
+    padding: 1em;
+    color:var(--white);
+    border-radius:6px;
+}
+
+#exp h3{
+    font-size:18px;
+    font-weight: bold;
+    padding-left:1em;
+    padding-bottom:0.5em;
+}
+
+#exp div>p{
+    font-size: 16px;
+}
+
+#proven{
+    margin-top:4em;
+    background-color: var(--blue);
+    padding:2em;
+    color:var(--white);
+}
+
+#proven h2{
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#proven p{
+    font-size: 16px;
+}
+
+#proven h3{
+    font-size:25px;
+    font-weight: bold;
+    padding-left:0.6em;
+    padding-bottom:1em;
+    padding-top:1em;
+}
+
+#proven div{
+    margin-bottom:-0.5em;
+}
+
+table{
+    border: 2px solid var(--black);
+    border-collapse: collapse;
+    margin:0 auto;
+    background-color: var(--black);
+    width:100%;
+    
+}
+
+td, th{
+    padding: 0.5em;
+    border: 2px solid var(--black);
+    padding:0.7em;
+    font-size:15px;
+}
+
+td{
+    text-align: center;
+}
+
+tr:nth-of-type(even) {
+     background-color:var(--charcoal); 
+    }
+
+
+#contact{
+    background-color: var(--black);
+    color:var(--white);
+    padding:2em;
+}
+
+#contact h2{
+    font-size: 25px;
+    font-weight: bold;
+    padding-left: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+#contact p{
+    font-size: 16px;
+    margin-bottom: 1em;
+}
+
+/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS 
+ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+form{
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+label{
+    font-size: 15px;
+}
+
+
+input[type=text], input[type=email], select,textarea {
+   box-sizing: border-box;
+   width: auto;
+   padding: 14px;
+   border: 2.5px solid var(--blue);
+   margin-bottom:15px;
+}
+
+textarea{
+    height:95px;
+}
+
+input[type=submit] {
+   width: auto;
+   background-color: var(--blue);
+   color: var(--white);
+   padding: 15px;
+   margin: 10px 0;
+   border: none;
+   border-radius: 6px;
+   cursor: pointer;
+   font-weight:bold;
+   font-size:15.5px;
+}
+
+footer{
+    background-color:var(--black);
+    padding-bottom:3.5em;
+    padding-top:1em;
+    color:var(--white);
+    text-align:center;
+    font-size: small;
+    font-size:13px;
+}
+
+footer span{
+    color:var(--white);
+}
+
+footer a{
+    text-decoration: none;
+}
+
+
+
+
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
- {
+ #innovation{
     background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('images/vanguard-hero.jpg') no-repeat center center/cover;
     height: 80vh;
     display: grid;
@@ -85,9 +305,8 @@ table {
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- {
+.image {
     content: "";
-
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
@@ -113,7 +332,7 @@ table {
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    transition: ;
+    /* transition: ; */
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -127,6 +346,7 @@ table {
     font-weight: bold;
     color: var(--white);
 }
+
 @keyframes stepUp {
     0% {
         height: 0;
@@ -142,7 +362,6 @@ table {
 
 
 /* MEDIA QUERIES (MEDIUM) */ 
-
     #results {
         grid-template-columns: 1fr 1fr;
     }
