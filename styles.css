@@ -1,8 +1,9 @@
-/* styles.css by Alex Rodriguez*/
+/* styles.css. by Alex Rodriguez */
 
 /* IMPORTED FONTS*/
-/* IMPORT "INTER" FROM GOOGLE FONTS" */
+/* IMPORT "INTER" FROM GOOGLE FONTS"*/
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 
 /* CSS RESET */
 /* http://meyerweb.com/eric/tools/css/reset/
@@ -64,10 +65,16 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
-h1, h2, h3,p, li,table, form, footer{
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3,p, li,table, form, footer,div{
     font-family: inter;
 }
 
+/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
 body{
     min-width: 400px;
     line-height: 1.5;
@@ -75,6 +82,23 @@ body{
     max-width:100%;
 }
 
+h1{
+    font-size: larger;
+    font-weight: bold;
+}
+
+p{
+    font-size: 16px;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 25px;
+    padding-bottom:0.6em;
+    padding-left:0.5em;
+}
+
+/* Navigation styles */
 header{
     background-color: var(--black);
     color:var(--blue);
@@ -87,19 +111,9 @@ header{
     padding:1em;
     position: relative;
 }
-h1{
-    font-size: larger;
-    font-weight: bold;
-}
+
 header h2{
     visibility: hidden;
-}
-
-#innovation{
-    color:var(--white);
-    grid-template-rows: 0.01fr 0.01fr 0.01fr;
-    align-content: center;
-    
 }
 
 .blursec{
@@ -108,75 +122,65 @@ header h2{
   padding:10px;
 }
 
-#innovation h2{
-    font-weight: bold;
-    font-size: 25px;
-    padding-bottom:0.6em;
-}
 
-#innovation p:nth-last-of-type(1){
-    background-color: var(--blue);
-    border-radius: 5px;
-    padding: 0.6em;
-    font-weight: bold;
-    width:45%;
-    padding:.8em;
-    margin:1rem auto;
-}
-
-#exp h2:nth-last-of-type(1){
-    padding-top: 1em;
-}
-
+/* expertise section styles*/
 #exp h2{
-    font-size:25px;
-    font-weight: bold;
     padding-left: 1em;
-    padding-top:2em;
-    padding-bottom: 0.5em;
+    padding-top:1.5em;
+    padding-bottom: 1em;
 }
 
-#exp div{
+#exp-grid div{
     background-color: var(--blue);
     margin-bottom:1em;
     padding: 1em;
     color:var(--white);
     border-radius:6px;
+    display: grid;
+    grid-template-columns: 1fr; /* default mobile */
+    gap: 12px;
 }
 
-#exp h3{
+#exp-grid{
+    display:flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%
+}
+.results-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+#exp-grid h3{
     font-size:18px;
     font-weight: bold;
     padding-left:1em;
     padding-bottom:0.5em;
 }
 
-#exp div>p{
-    font-size: 16px;
+#exp-grid > div > p{
+    flex-grow: 1;
 }
 
+/* proven results section */
 #proven{
     margin-top:4em;
     background-color: var(--blue);
-    padding:2em;
+    padding:2em 0 2em 0;
     color:var(--white);
 }
 
 #proven h2{
-    font-size: 25px;
-    font-weight: bold;
-    padding-left: 0.5em;
-    padding-bottom: 0.5em;
-}
-
-#proven p{
-    font-size: 16px;
+    padding-bottom: 0.6em;
 }
 
 #proven h3{
     font-size:25px;
     font-weight: bold;
-    padding-left:0.6em;
+    padding-left:0.5em;
     padding-bottom:1em;
     padding-top:1em;
 }
@@ -185,19 +189,27 @@ header h2{
     margin-bottom:-0.5em;
 }
 
+.results-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+/* table style */
 table{
-    border: 2px solid var(--black);
+    border: 2px solid var(--charcoal);
     border-collapse: collapse;
     margin:0 auto;
     background-color: var(--black);
-    width:100%;
+    width: 100%;
+    height:auto;
+    margin-bottom:1.5em;
+    max-width: 100%;
     
 }
 
 td, th{
-    padding: 0.5em;
-    border: 2px solid var(--black);
-    padding:0.7em;
+    border: 2px solid var(--charcoal);
+    padding:1.3em;
     font-size:15px;
 }
 
@@ -205,50 +217,33 @@ td{
     text-align: center;
 }
 
-tr:nth-of-type(even) {
+table tbody tr:nth-of-type(even) {
      background-color:var(--charcoal); 
     }
 
-
+/* contact us section style */
 #contact{
     background-color: var(--black);
     color:var(--white);
-    padding:2em;
+    padding:2em 0 2em 0;
 }
 
-#contact h2{
-    font-size: 25px;
-    font-weight: bold;
-    padding-left: 0.5em;
-    padding-bottom: 0.5em;
-}
 
 #contact p{
-    font-size: 16px;
     margin-bottom: 1em;
 }
 
-/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS 
-ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-form{
+.pair{
     display:flex;
     flex-direction: column;
     flex-wrap: nowrap;
 }
 
 label{
-    font-size: 15px;
+    font-size: 16px;
 }
 
-
 input[type=text], input[type=email], select,textarea {
-   box-sizing: border-box;
    width: auto;
    padding: 14px;
    border: 2.5px solid var(--blue);
@@ -272,26 +267,75 @@ input[type=submit] {
    font-size:15.5px;
 }
 
+input[type=submit]:hover{
+    background-color: var(--red);
+}
+
+/* footer section styles */
+
 footer{
     background-color:var(--black);
-    padding-bottom:3.5em;
+    padding-bottom:2.5em;
     padding-top:1em;
     color:var(--white);
     text-align:center;
-    font-size: small;
-    font-size:13px;
+}
+
+footer p, footer a, footer span, footer address{
+    text-align:center;
+    font-size: 14px;
 }
 
 footer span{
     color:var(--white);
 }
 
-footer a{
+a{
     text-decoration: none;
+}
+
+.email{
+    text-decoration: underline;
+    color:var(--blue);
+}
+
+nav {
+    position: absolute;
+    top: -30px;
+    right: 10px;
+}
+
+nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr 0.5fr;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--blue);
+    font-weight: bold;
+}
+
+nav a:hover {
+    background-color: #007BFF;
+    color: var(--black);
+    padding:0.5em;
 }
 
 
 
+/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
+
+/* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
 /* ADD TO "INNOVATION & INVESTMENT SECTION (Photo by Kevin Matos on Unsplash) */
  #innovation{
@@ -302,17 +346,39 @@ footer a{
     text-align: center;
     padding: 1rem;
     overflow: hidden;
+
+    /* added styles */
+    color:var(--white);
+    grid-template-rows: 0.01fr 0.01fr 0.01fr;
+    align-content: center;
+}
+
+#innovation p:nth-last-of-type(1){
+    background-color: var(--blue);
+    border-radius: 5px;
+    font-weight: bold;
+    width:51%;
+    padding:0.7em;
+    margin:1rem auto;
+}
+
+#innovation p:nth-last-of-type(1):hover{
+    background-color: var(--red);
+
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
+ 
 .image {
     content: "";
+
     left:-.5rem;
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
 
 }
+
 /* THIS ONE IS DONE FOR YOU */
 #bar-chart {
     display: grid;
@@ -332,7 +398,7 @@ footer a{
     background: var(--charcoal);
     border-radius: 10px;
     position: relative;
-    /* transition: ; */
+    transition: height 0.3s ease;
     height: 0;
 }
 /* THIS ONE IS DONE FOR YOU */
@@ -347,6 +413,7 @@ footer a{
     color: var(--white);
 }
 
+/* keyframes */
 @keyframes stepUp {
     0% {
         height: 0;
@@ -355,26 +422,159 @@ footer a{
         height: var(--height);
     }
 }
+
+@keyframes shiftDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+ @keyframes bounceUpDown{
+    0%, 100%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-20px);
+    }
+
+    
+ }
+
 /* ADD ANIMATION ON stepUp for 1s ease-in-out forwards */
 .bar {
     animation: stepUp 1s ease-in-out forwards;
 }
 
+/* letters shift down */
+h2, #innovation p:nth-last-of-type(1), h3{
+  transform: translateY(-20px);
+  animation: shiftDown 1s ease-out forwards;
+}
+
+/* expertise section goes up */
+#exp-grid div:hover{
+    transform: translateY(-10px);
+}
+
+/* logo bounce */
+.image{
+    animation: bounceUpDown 10s ease-in-out infinite;
+}
+
+/* transition for button hover */
+#innovation p:nth-last-of-type(1), input[type=submit]{
+    transition: transform 0.3s ease; 
+}
+
+/* button animation */
+#innovation > p:nth-last-of-type(1):hover,input[type=submit]:hover{
+    transform: scale(1.01);
+}
+
+
 
 /* MEDIA QUERIES (MEDIUM) */ 
-    #results {
-        grid-template-columns: 1fr 1fr;
-    }
+@media screen and (min-width:800px){
+     * {
+  box-sizing: border-box;
+}
+    
     .results-container {
+        display: flex;
         flex-direction: row;
         justify-content: space-between;
+        gap:20px;
     }
     .results-table {
         width: 50%;
+        height:550%;
     }
-    .bar-chart {
+    #bar-chart {
         width: 50%;
+        height:75%;
+    }
+    
+
+    #exp-grid{
+       display:grid;
+       grid-template-columns: 1fr 1fr;
+       grid-template-rows: auto;
+       gap: 12px;
     }
 
+    #innovation p:nth-last-of-type(1){
+    background-color: var(--blue);
+    border-radius: 5px;
+    font-weight: bold;
+    width:25%;
+    padding:0.7em;
+    
+}
 
 /* MEDIA QUERIES (LARGE) */
+
+@media screen and (min-width: 1024px){
+    #exp-grid{
+        display:grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+    }
+
+.results-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin:0 12em 0 2em;
+        
+    }
+
+   table {
+        width:450px;
+    }
+
+    #bar-chart {
+        width:150%;
+        height:75%;
+    }
+
+    form {
+    max-width: 750px;
+    }
+
+    .row{
+        display:flex;
+        flex-direction: row;
+        gap:400px;
+    }
+
+    .pair{
+        display: flex;
+        flex-direction: column;
+        flex:1;
+    }
+
+    .pair input, .pair textarea{
+         width: 270%;
+    }
+
+    label {
+    margin-bottom: 2px;
+}
+
+input[type="submit"] {
+    height: 40px;
+    margin-top: 24px;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+#innovation p:nth-last-of-type(1){
+    background-color: var(--blue);
+    border-radius: 5px;
+    font-weight: bold;
+    width:25%;
+    padding:0.7em;
+    margin:1rem auto;
+}
+}}
