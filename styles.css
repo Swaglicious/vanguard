@@ -65,7 +65,6 @@ table {
 }
 
 /* GLOBAL STYLES (MOBILE FIRST (SMALL) */
-
 * {
   box-sizing: border-box;
 }
@@ -122,7 +121,6 @@ header h2{
   padding:10px;
 }
 
-
 /* expertise section styles*/
 #exp h2{
     padding-left: 1em;
@@ -137,7 +135,7 @@ header h2{
     color:var(--white);
     border-radius:6px;
     display: grid;
-    grid-template-columns: 1fr; /* default mobile */
+    grid-template-columns: 1fr; 
     gap: 12px;
 }
 
@@ -272,7 +270,6 @@ input[type=submit]:hover{
 }
 
 /* footer section styles */
-
 footer{
     background-color:var(--black);
     padding-bottom:2.5em;
@@ -326,10 +323,6 @@ nav a:hover {
     padding:0.5em;
 }
 
-
-
-/* MIN-WIDTH OF THE PAGE SHOULD NOT GO BELOW 400PX */
-
 /* ADD A DIV WITH THE CLASS OF CONTAINER TO EVERY CONTENT CONTAINER THIS IS ALLOW THE BASE ELEMENTS TO BE 100% WIDTH, BUT CONSTRAIN THE ACTUAL CONTENT TO 90% */
 .container {
     width: 90%;
@@ -364,11 +357,9 @@ nav a:hover {
 
 #innovation p:nth-last-of-type(1):hover{
     background-color: var(--red);
-
 }
 
 /* ADD FLOATING SVG LOGO BEFORE THE H1 */
- 
 .image {
     content: "";
 
@@ -376,7 +367,6 @@ nav a:hover {
     width: 3.75rem;
     height: 3.75rem;
     background: url('images/vanguard-logo.svg') no-repeat center/contain;
-
 }
 
 /* THIS ONE IS DONE FOR YOU */
@@ -392,6 +382,7 @@ nav a:hover {
     padding: 1rem;
     position: relative;
 }
+
 /* ADD ON TRANSITION ON HEIGHT */
 .bar {
     width: 50px;
@@ -401,6 +392,7 @@ nav a:hover {
     transition: height 0.3s ease;
     height: 0;
 }
+
 /* THIS ONE IS DONE FOR YOU */
 .bar::after {
     content: attr(data-year);
@@ -472,8 +464,6 @@ h2, #innovation p:nth-last-of-type(1), h3{
     transform: scale(1.01);
 }
 
-
-
 /* MEDIA QUERIES (MEDIUM) */ 
 @media screen and (min-width:800px){
      * {
@@ -513,7 +503,6 @@ h2, #innovation p:nth-last-of-type(1), h3{
 }
 
 /* MEDIA QUERIES (LARGE) */
-
 @media screen and (min-width: 1024px){
     #exp-grid{
         display:grid;
@@ -577,4 +566,5 @@ input[type="submit"] {
     padding:0.7em;
     margin:1rem auto;
 }
-}}
+}
+}
